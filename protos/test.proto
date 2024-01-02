@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package test;
+
+service TestService {
+  rpc Test (ITestRequest) returns (ITestResponse) {}
+}
+
+message ITestRequest {
+    string id = 1;
+}
+
+message ITestResponse {
+    string ok = 1;
+}
